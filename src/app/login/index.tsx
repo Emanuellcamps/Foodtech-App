@@ -18,7 +18,7 @@ export default function Login() {
          <Text style = {styles.descriptionInput}>Senha</Text>
          <TextInput style = {styles.inputText} placeholder=' coloque sua senha' /> 
 
-         <TouchableOpacity style = {styles.button} onPress={() => router.push('/Home')}>
+         <TouchableOpacity style = {styles.button} onPress={() => router.push('/home')}>
            <Text style = {styles.buttonText}>LOGIN</Text>
          </TouchableOpacity>
 
