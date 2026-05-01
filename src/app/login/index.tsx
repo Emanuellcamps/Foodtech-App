@@ -16,7 +16,7 @@ export default function Login() {
          <Text style = {styles.descriptionInput}>Email</Text>
          <TextInput style = {styles.inputText} placeholder='nomedoseuemail@gmail.com'  />
          <Text style = {styles.descriptionInput}>Senha</Text>
-         <TextInput style = {styles.inputText} placeholder='*********' /> 
+         <TextInput style = {styles.inputText} placeholder=' coloque sua senha' /> 
 
          <TouchableOpacity style = {styles.button} onPress={() => router.push('/home')}>
            <Text style = {styles.buttonText}>LOGIN</Text>
