@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View, TextInput , TouchableOpacity  } from 'react-native'
+import { router } from 'expo-router';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-export default function LoginScreen() {
+export default function Login() {
+
   return (
     <View style={styles.background}>
       
@@ -16,7 +18,7 @@ export default function LoginScreen() {
          <Text style = {styles.descriptionInput}>Senha</Text>
          <TextInput style = {styles.inputText} placeholder='*********' /> 
 
-         <TouchableOpacity style = {styles.button}> 
+         <TouchableOpacity style = {styles.button} onPress={() => router.push('/home')}>
            <Text style = {styles.buttonText}>LOGIN</Text>
          </TouchableOpacity>
 
