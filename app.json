@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FoodTech-Project",
-    "slug": "FoodTech-Project",
+    "name": "foodtechproject",
+    "slug": "foodtechproject",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": ".scr/assets/images/icon.png",
@@ -34,4 +34,5 @@
       "typedRoutes": true
     }
   }
+  
 }
