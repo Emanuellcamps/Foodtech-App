@@ -11,6 +11,7 @@ export default function Home() {
                 description="Wendy´s Burger"
                 value={19.99}
             />
+            
         </ScrollView>
     )
 };
