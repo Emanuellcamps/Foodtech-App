@@ -1,7 +1,5 @@
 import { router } from 'expo-router';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import Button from '../components/Button';
-import Home from './home';
 
 export default function Login() {
 
@@ -18,12 +16,11 @@ export default function Login() {
          <Text style = {styles.descriptionInput}>Email</Text>
          <TextInput style = {styles.inputText} placeholder='nomedoseuemail@gmail.com'  />
          <Text style = {styles.descriptionInput}>Senha</Text>
-         <TextInput style = {styles.inputText} placeholder='************' /> 
+         <TextInput style = {styles.inputText} placeholder=' coloque sua senha' /> 
 
-
-      <Button name='LOGIN' route='/home'/> 
-
-
+         <TouchableOpacity style = {styles.button} onPress = {()=>{router.push('/home')}}>
+           <Text style={styles.buttonText}>LOGIN</Text>
+         </TouchableOpacity>
 
       <View style = {styles.textCreateAcoount}>
          
@@ -37,7 +34,7 @@ export default function Login() {
 
     </View>
  )
-} 
+}
 
 const styles = StyleSheet.create({
   background : {
@@ -68,9 +65,8 @@ const styles = StyleSheet.create({
 
   WhiteBG : {
     backgroundColor: '#ffffff',
-    marginTop : 71,
-    paddingTop : 2,
-    marginBottom : -10,
+    marginTop : 70,
+    paddingTop : 24,
     borderRadius : 10 ,
     flex : 2,
   },
@@ -98,6 +94,21 @@ const styles = StyleSheet.create({
     paddingBottom : 5,
   },
   
+  button : {
+    backgroundColor : '#ef2a39',
+    borderRadius : 5,
+    marginRight : 20,
+    marginLeft : 20,
+    paddingTop : 15,
+    paddingBottom : 15,
+    marginTop : 34,
+   
+  },
+  buttonText : {
+   color : '#ffffff',
+   fontFamily : 'monospace',
+    textAlign : 'center',
+  },
 
   textCreateAcoount : {
     flexDirection : 'row',

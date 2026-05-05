@@ -20,55 +20,37 @@ export default function CardProducts( props : CardProductsProps) {
 }
 
 const styles = StyleSheet.create({
-   card : {
-    justifyContent : 'center',
-    alignItems : 'center',
-    paddingTop : 80,
-    borderRadius : 10,
-    backgroundColor : '#f9f7f7',
-    paddingBottom : 30,
-    padding : 2,
-    margin : 105,
-    shadowColor : '#000',
-    shadowOffset : { width : 0, height : 2 },
-    shadowOpacity : 0.25,
-    elevation : 5,  
-   },
+  card: {
+    width: 160, // 👈 ESSENCIAL
+    borderRadius: 10,
+    backgroundColor: '#f9f7f7',
+    padding: 10,
+    marginRight: 10, // 👈 espaço entre cards
 
-   description : {
-    fontSize : 14,
-    marginRight : 31,
-    marginTop : 1,
-    right : 10,
-},
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    elevation: 5,
+  },
 
-    title : {
-        fontWeight : 'bold',
-        marginRight : 38,
-        marginTop : 9,
-        right : 10,
-        
-    },
-   
-    value : {
-        paddingTop : 5,
-        marginBottom : 8,
-        justifyContent : 'flex-start',
-        alignSelf : 'flex-start',
-        position : 'absolute',
-        top : 188,
-        right : 110,
-        
+  image: {
+    width: '100%',
+    height: 100,
+    borderRadius: 10,
+  },
 
-    },
-   
-   image : {
-    width : 140,
-    height : 120,
-    borderRadius : 10,
-    marginTop : -60,
-    
-   },
+  title: {
+    fontWeight: 'bold',
+    marginTop: 8,
+  },
 
-})
+  description: {
+    fontSize: 12,
+    color: '#555',
+  },
 
+  value: {
+    marginTop: 5,
+    fontWeight: 'bold',
+  },
+});
