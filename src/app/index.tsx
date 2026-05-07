@@ -1,5 +1,6 @@
 import { router } from 'expo-router';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import Button from '../components/Button';
 
 export default function Login() {
 
@@ -16,12 +17,9 @@ export default function Login() {
          <Text style = {styles.descriptionInput}>Email</Text>
          <TextInput style = {styles.inputText} placeholder='nomedoseuemail@gmail.com'  />
          <Text style = {styles.descriptionInput}>Senha</Text>
-         <TextInput style = {styles.inputText} placeholder=' coloque sua senha' /> 
+         <TextInput style = {styles.inputText} placeholder='coloque sua senha' /> 
 
-         <TouchableOpacity style = {styles.button} onPress = {()=>{router.push('/home')}}>
-           <Text style={styles.buttonText}>LOGIN</Text>
-         </TouchableOpacity>
-
+         <Button name = "LOGIN" route = "/home" />
       <View style = {styles.textCreateAcoount}>
          
          
@@ -69,6 +67,7 @@ const styles = StyleSheet.create({
     paddingTop : 24,
     borderRadius : 10 ,
     flex : 2,
+    marginBottom : -30,
   },
 
   inputText : {
