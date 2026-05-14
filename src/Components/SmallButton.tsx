@@ -20,18 +20,21 @@ return (
 const styles = StyleSheet.create ({
  cardButton : {
   backgroundColor : "#ef2a39",
-  height : 50,
-  width : 50,
+  height : 46,
+  width : 49,
   borderRadius : 10,
   justifyContent : "center",
   alignItems : 'center',
-  paddingBottom : 15
+  
 
  },
 
  imageCard : {
   height : 25,
   width : 25,
+  marginBottom : 7,
+  marginRight : 3,
+  
  },
 
 })

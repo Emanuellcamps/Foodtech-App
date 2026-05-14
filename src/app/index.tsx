@@ -19,7 +19,7 @@ export default function Login() {
          <Text style = {styles.descriptionInput}>Senha</Text>
          <TextInput style = {styles.inputText} placeholder='coloque sua senha' /> 
 
-         <Button name = "LOGIN" route = "/home" />
+         <Button text = "LOGIN" route = "/home" />
       <View style = {styles.textCreateAcoount}>
          
          

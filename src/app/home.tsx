@@ -10,7 +10,7 @@ export default function Home() {
   id : 1,
   title : "Cheese Burguer",
   description : "Wendy's Burguer",
-  image : "https://images.pexels.com/photos/23910856/pexels-photo-23910856.jpeg",
+  image : require ('../assets/image/cardHome/Cheese Burguer.jpeg'),
   price : 22.00,
     },
 
@@ -18,7 +18,7 @@ export default function Home() {
   id : 2,
   title : "Nutri Burger",
   description : "Focus on health",
-  image : "https://images.pexels.com/photos/20722041/pexels-photo-20722041.jpeg",
+  image : require ('../assets/image/cardHome/NutriBurguer.jpeg'),
   price : 19.00,
     },
     
@@ -26,7 +26,7 @@ export default function Home() {
   id : 3,
   title : "Chicken Burguer",
   description : "A surprising difference",
-  image : "https://images.pexels.com/photos/23910856/pexels-photo-23910856.jpeg",
+  image : require ('../assets/image/cardHome/Chicken Burguer.jpg'),
   price : 20.00,
     },
     
@@ -34,7 +34,7 @@ export default function Home() {
   id : 4,
   title : "Big Burguer",
   description : "Big appetites",
-  image : "https://images.pexels.com/photos/20722032/pexels-photo-20722032.jpeg",
+  image : require ('../assets/image/cardHome/Big Burguer.jpeg'),
   price : 25.00,
     },
     
@@ -42,7 +42,7 @@ export default function Home() {
   id : 5,
   title : "Colossus Burguer",
   description : "Extreme situations",
-  image : "https://images.pexels.com/photos/14678998/pexels-photo-14678998.jpeg",
+  image : require ('../assets/image/cardHome/Colossus Burguer.jpeg'),
   price : 27.00,
     },
     
@@ -50,7 +50,7 @@ export default function Home() {
   id : 6,
   title : "Simpls Burguer",
   description : "Well done basic",
-  image : "https://images.pexels.com/photos/20722033/pexels-photo-20722033.jpeg",
+  image : require ('../assets/image/cardHome/Simpls Burguer.jpeg'),
   price : 13.00,
     },
     
@@ -58,7 +58,7 @@ export default function Home() {
   id : 7,
   title : "Cheddar Burguer",
   description : "The more the merrier",
-  image : "https://pixabay.com/pt/images/download/x-7419419_1920.jpg",
+  image : require ('../assets/image/cardHome/Cheedar Burguer.jpg'),
   price : 22.00,
     },
     
@@ -66,26 +66,27 @@ export default function Home() {
   id : 8,
   title : "House Burguer",
   description : "House Dish",
-  image : "https://pixabay.com/pt/images/download/x-7422959_1920.jpg",
+  image : require ('../assets/image/cardHome/Home Burguer.jpg'),
   price : 23.00,
     },
 ]
+   
+  
 
 
 
 
 
-  return ( <View style = {styles.screenBack}>
+  return ( 
+    <View style = {styles.screenBack}>
     <View style={styles.textAlign}>
 
       <Text style={styles.nameApp}> FoodTech </Text>
       <Text style= {styles.loganApp}> From the app to your couch </Text>
     </View>
 
-    <View style = {styles.alignButtonBack}>
-      <TouchableOpacity style={styles.configButtonBack} onPress={()=>router.push('/') }>
-      <Image style={styles.imageButtonBack} source={require('../assets/icon/sair (1).png')}/>
-      </TouchableOpacity>
+    <View style = {styles.configButtonBack}>
+    <SmallButton image={require('../assets/icon/sair (1).png')} route='/' />
     </View>
 
     <View>
@@ -96,17 +97,11 @@ export default function Home() {
      <View style={styles.containerFlatlistCards}>
       <FlatList
         data={productList}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item.id.toString()}  // Item é o objeto atual da lista
           numColumns={2}
-          columnWrapperStyle={{
-          
-  }}
           contentContainerStyle={{
           paddingLeft : 18,
-          paddingTop: 19,
-          
-          
-  }}
+          paddingTop: 19 }}
         renderItem={({ item }) => (
           <CardProducts
             title={item.title}
@@ -116,6 +111,7 @@ export default function Home() {
           />
         )}
       />
+      
      <View style= {styles.bodyButtons}>
            <SmallButton image = {require('../assets/icon/botao-home (1).png')} route = '/cart'/>  
            <SmallButton image = {require('../assets/icon/carrinho-de-compras (1).png')} route = '/cart'/>  
@@ -187,30 +183,14 @@ bodyButtons : {
   width : "100%",
   marginBottom : -60,
   
+  
 },
 
 configButtonBack : {
- flexDirection : 'column',
- alignItems : 'center',
- justifyContent : 'center',
- backgroundColor : '#ef2a39',
- height : 50,
- width : 50,
- borderRadius : 10,
-}, 
-
-imageButtonBack : {
- height : '50%',
- width : '50%',
+ marginLeft : 321,
+ top : -60
 },
-
-alignButtonBack : {
-  alignItems : 'flex-end',
-  top : -60,
-  right : 10 ,
-}, 
-}
-);
+});
 
 
 
