@@ -6,7 +6,8 @@ import useAmount from "../hooks/useAmount";
 import useCart from "../hooks/useCart";
 
 export default function Customize() {
-  const { title, price , image } = useLocalSearchParams();
+  const { title, price , image , composition } = useLocalSearchParams();
+  const burgerComposition = composition ? JSON.parse(composition as string) : [];
   const { addToCart } = useCart();
   const { selectedItems, increment, decrement } = useAmount();
 
@@ -93,22 +94,35 @@ export default function Customize() {
 
   return (
     <ScrollView>
-      <View style={styles.alignButtoBack}>
+      <View style={styles.alignHeader}>
+        <Text style = {styles.alignPersonalizar}>PERSONALIZAR</Text> 
         <SmallButton
           image={require("../assets/icon/sair (1).png")}
           route="/home"
         />
+       
       </View>
 
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row",marginBottom : -40, }}>
         <Image
           style={styles.imageBurguerDesmont}
           source={require("../assets/image/burguerdesmontado.png")}
         />
-        <Text style={styles.textMensage}>
-          Personalize o Hamburguer ao seu gosto
-        </Text>
-      </View>
+
+      <View style = {styles.alignComposition}>
+       <Text style = {styles.textComposition} > COMPOSIÇÃO </Text>
+       {burgerComposition.map((item: string, index: number) => (
+       <Text key={index} style = {{color: '#ffff'}}>
+       {item}
+       </Text>
+       ))}
+       </View>
+    </View>
+
+   
+
+
+
 
       <View style={styles.listAdd}>
         <Text style={styles.textCategory}>Molhos</Text>
@@ -194,7 +208,28 @@ const styles = StyleSheet.create({
 
   imageBurguerDesmont: {
     marginTop: 80,
+    right : 13,
     marginBottom: -370,
+  },
+
+  textComposition : {
+  left : 16,
+  marginBottom : 20,
+  fontFamily: "serif",
+  fontWeight: 'bold',
+  color : "#ffff",
+
+  },
+
+  alignComposition : {
+    top : 130,
+    right : 5,
+    backgroundColor : '#ef2a39',
+    borderRadius : 15,
+    padding : 20,
+    height : 230,
+    width : 180,
+    
   },
 
   textMensage: {
@@ -206,10 +241,19 @@ const styles = StyleSheet.create({
     padding: 3,
   },
 
-  alignButtoBack: {
-    alignItems: "flex-end",
+  alignHeader: {
+    alignItems: "flex-start",
+    justifyContent : "flex-end",
     marginRight: 15,
     top: 50,
+    flexDirection : 'row',
+  },
+
+  alignPersonalizar : {
+    marginRight : 65,
+    fontWeight: 'bold',
+    fontSize : 19,
+    
   },
 
   buttonContainer: {
@@ -238,7 +282,7 @@ const styles = StyleSheet.create({
 
   listStyle: {
     gap: 12,
-    backgroundColor: "#ddd9d9",
+    backgroundColor: "#ef2a39",
     padding: 10,
     borderRadius: 10,
   },

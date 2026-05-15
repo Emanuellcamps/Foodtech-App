@@ -1,9 +1,9 @@
 import { router } from "expo-router";
 import { useState } from "react";
-import { Alert, StyleSheet, Text,TextInput,TouchableOpacity, View,} from "react-native";
+import { Alert, StyleSheet, Text,TextInput,TouchableOpacity, View, ScrollView} from "react-native";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase/auth";
+import { auth } from "../services/firebase/auth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -34,12 +34,12 @@ export default function Login() {
         </Text>
       </View>
 
-      <View style={styles.WhiteBG}>
+      <ScrollView style={styles.WhiteBG}>
         <Text style={styles.descriptionInput}>Email</Text>
 
         <TextInput
           style={styles.inputText}
-          placeholder="nomedoseuemail@gmail.com"
+          placeholder="seuemail@gmail.com"
           value={email}
           onChangeText={setEmail}
         />
@@ -48,7 +48,7 @@ export default function Login() {
 
         <TextInput
           style={styles.inputText}
-          placeholder="coloque sua senha"
+          placeholder="Insira sua senha"
           secureTextEntry
           value={senha}
           onChangeText={setSenha}
@@ -62,7 +62,7 @@ export default function Login() {
           <Text>Não possui uma conta? </Text>
           <Text style={{ color: "#ef2a39" }}> Criar uma conta </Text>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }

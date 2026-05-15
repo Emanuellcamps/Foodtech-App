@@ -7,6 +7,7 @@ type CardProductsProps = {
   title: string;
   description: string;
   price: number;
+  composition : string [],
 };
 
 export default function CardProducts(props: CardProductsProps) {
@@ -21,6 +22,7 @@ export default function CardProducts(props: CardProductsProps) {
         description: props.description,
         price: props.price.toString(),
         image: JSON.stringify(props.image),
+        composition: JSON.stringify(props.composition),
 },
 }
 )
