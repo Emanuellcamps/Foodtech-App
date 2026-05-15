@@ -213,8 +213,8 @@ const styles = StyleSheet.create({
   },
 
   textComposition : {
-  left : 16,
-  marginBottom : 20,
+  left : 27,
+  marginBottom : 19,
   fontFamily: "serif",
   fontWeight: 'bold',
   color : "#ffff",
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     right : 5,
     backgroundColor : '#ef2a39',
     borderRadius : 15,
-    padding : 20,
+    padding : 5,
     height : 230,
     width : 180,
     
