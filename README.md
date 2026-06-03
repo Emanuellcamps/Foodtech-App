@@ -76,3 +76,19 @@ npm run android
 
 # To run on iOS
 npm run ios
+
+---------------------------------------------
+
+Desenvolvedores do Projeto
+
+
+João Emanuell Campelo Santos- 01796986
+
+Rafael Costa Araujo do Nascimento: 01795253
+
+Kawan José Souza Campelo: 01793880
+
+Allan Alves Soares 01737148
+
+Jean Lins Messias de Sousa Junior - 01798086
+
